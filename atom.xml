@@ -2,7 +2,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://454394216.github.io/zhangyigridea.github.io/</id>
     <title>Gridea</title>
-    <updated>2020-07-27T14:08:46.892Z</updated>
+    <updated>2020-07-27T15:02:40.084Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
     <link rel="alternate" href="https://454394216.github.io/zhangyigridea.github.io/"/>
     <link rel="self" href="https://454394216.github.io/zhangyigridea.github.io/atom.xml"/>
@@ -10,6 +10,69 @@
     <logo>https://454394216.github.io/zhangyigridea.github.io/images/avatar.png</logo>
     <icon>https://454394216.github.io/zhangyigridea.github.io/favicon.ico</icon>
     <rights>All rights reserved 2020, Gridea</rights>
+    <entry>
+        <title type="html"><![CDATA[使用代理加速github]]></title>
+        <id>https://454394216.github.io/zhangyigridea.github.io/post/shi-yong-dai-li-jia-su-github/</id>
+        <link href="https://454394216.github.io/zhangyigridea.github.io/post/shi-yong-dai-li-jia-su-github/">
+        </link>
+        <updated>2020-07-27T14:55:38.000Z</updated>
+        <content type="html"><![CDATA[<p>因为git默认是不使用系统的代理服务器，即使我们开了梯子，git下载依然很慢，所以需要一些额外配置。这儿我们以windows下的lantern为例</p>
+<h2 id="查看代理服务器">查看代理服务器</h2>
+<ol>
+<li>打开lantern设置<br>
+<img src="https://454394216.github.io/zhangyigridea.github.io//post-images/1595861891781.png" alt="" loading="lazy"></li>
+<li>点击设置<br>
+<img src="https://454394216.github.io/zhangyigridea.github.io//post-images/1595861885372.png" alt="" loading="lazy"></li>
+<li>点击高级设置，查看代理服务器<br>
+<img src="https://454394216.github.io/zhangyigridea.github.io//post-images/1595861935756.png" alt="" loading="lazy"></li>
+</ol>
+<h2 id="git配置http代理">git配置http代理</h2>
+<p>用于加速https形式的clone</p>
+<ol>
+<li>
+<p>设置http代理 用于我们只有从github上clone时才会用到代理，从码云或者自己的git服务器时就不需要了，所以配置时加上域名</p>
+<p><strong>git config --global http.https://github.com.proxy http://127.0.0.1:51462</strong><br>
+<img src="https://454394216.github.io/zhangyigridea.github.io//post-images/1595862059482.png" alt="" loading="lazy"></p>
+</li>
+<li>
+<p>设置配置https代理</p>
+<p><strong>git config --global https.https://github.com.proxy http://127.0.0.1:51462</strong><br>
+<img src="https://454394216.github.io/zhangyigridea.github.io//post-images/1595862066655.png" alt="" loading="lazy"></p>
+</li>
+<li>
+<p>查看git 配置。 确认已生效</p>
+<p>**git config -l **<br>
+<img src="https://454394216.github.io/zhangyigridea.github.io//post-images/1595862097330.png" alt="" loading="lazy"></p>
+</li>
+<li>
+<p>取消配置。如果需要取消使用unset</p>
+<p><strong>git config --global --unset http.https://github.com.proxy</strong></p>
+<p><strong>git config --global --unset https.https://github.com.proxy</strong></p>
+</li>
+</ol>
+<h2 id="配置ssh代理">配置ssh代理</h2>
+<p>很多时候我是通过ssh来下载代码，因此还需要为ssh配置代理</p>
+<ol>
+<li>
+<p>编辑配置文件 vim ~/.ssh/config<br>
+<img src="https://454394216.github.io/zhangyigridea.github.io//post-images/1595862117309.png" alt="" loading="lazy"></p>
+</li>
+<li>
+<p>增加一个github的配置段，为连接github.com时配置lantern的sockets代理</p>
+<pre><code class="language-c">Host github.com
+  HostName github.com
+  User git
+  ProxyCommand connect -S 127.0.0.1:51463 %h %p
+</code></pre>
+</li>
+</ol>
+<figure data-type="image" tabindex="1"><img src="https://454394216.github.io/zhangyigridea.github.io//post-images/1595862125982.png" alt="" loading="lazy"></figure>
+<h2 id="linux下的配置">linux下的配置</h2>
+<p>linux下配置整体和上面windows的相同，只是ssh代理里的<code>ProxyCommand connect -S 127.0.0.1:51463 %h %p</code>需要修改为<code>ProxyCommand nc -v -x 127.0.0.1:51463 %h %p</code></p>
+<h2 id="其他梯子">其他梯子</h2>
+<p>如果使用的是其他梯子原理也相同，只需要找到梯子的代理服务器地址即可</p>
+]]></content>
+    </entry>
     <entry>
         <title type="html"><![CDATA[C语言结构体对齐]]></title>
         <id>https://454394216.github.io/zhangyigridea.github.io/post/c-yu-yan-jie-gou-ti-dui-qi/</id>
