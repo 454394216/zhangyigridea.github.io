@@ -2,7 +2,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://454394216.github.io/zhangyigridea.github.io/</id>
     <title>Gridea</title>
-    <updated>2020-07-27T14:03:44.803Z</updated>
+    <updated>2020-07-27T14:08:46.892Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
     <link rel="alternate" href="https://454394216.github.io/zhangyigridea.github.io/"/>
     <link rel="self" href="https://454394216.github.io/zhangyigridea.github.io/atom.xml"/>
@@ -19,7 +19,7 @@
         <content type="html"><![CDATA[<h1 id="结构体内存对齐">结构体内存对齐</h1>
 <ol>
 <li>
-<p>结构体对齐是为了提高CPU读取内存效率，防止一个数据放在两个8自己内存块中。无论是否对齐，x86-64都能正确工作。对齐的基本原则是**<span class="katex"><span class="katex-mathml"><math><semantics><mrow><mi>K</mi></mrow><annotation encoding="application/x-tex">K</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.68333em;vertical-align:0em;"></span><span class="mord mathdefault" style="margin-right:0.07153em;">K</span></span></span></span>字节类型对象的对象起始地址必须是<span class="katex"><span class="katex-mathml"><math><semantics><mrow><mi>K</mi></mrow><annotation encoding="application/x-tex">K</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.68333em;vertical-align:0em;"></span><span class="mord mathdefault" style="margin-right:0.07153em;">K</span></span></span></span>的倍数**：<br>
+<p>结构体对齐是为了提高CPU读取内存效率，防止一个数据放在两个8自己内存块中。无论是否对齐，x86-64都能正确工作。对齐的基本原则是<strong>K字节类型对象的对象起始地址必须是K的倍数</strong>：<br>
 <img src="https://454394216.github.io/zhangyigridea.github.io//post-images/1595856553524.png" alt="" loading="lazy"></p>
 </li>
 <li>
