@@ -1,30 +1,30 @@
 <?xml version="1.0" encoding="utf-8"?>
 <feed xmlns="http://www.w3.org/2005/Atom">
-    <id>https://454394216.github.io/zhangyigridea.github.io/</id>
+    <id>https://zyrjm.xyz</id>
     <title>Gridea</title>
-    <updated>2020-07-29T14:21:35.598Z</updated>
+    <updated>2020-07-29T14:33:18.372Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
-    <link rel="alternate" href="https://454394216.github.io/zhangyigridea.github.io/"/>
-    <link rel="self" href="https://454394216.github.io/zhangyigridea.github.io/atom.xml"/>
+    <link rel="alternate" href="https://zyrjm.xyz"/>
+    <link rel="self" href="https://zyrjm.xyz/atom.xml"/>
     <subtitle>梦想存储罐</subtitle>
-    <logo>https://454394216.github.io/zhangyigridea.github.io/images/avatar.png</logo>
-    <icon>https://454394216.github.io/zhangyigridea.github.io/favicon.ico</icon>
+    <logo>https://zyrjm.xyz/images/avatar.png</logo>
+    <icon>https://zyrjm.xyz/favicon.ico</icon>
     <rights>All rights reserved 2020, Gridea</rights>
     <entry>
         <title type="html"><![CDATA[使用代理加速github]]></title>
-        <id>https://454394216.github.io/zhangyigridea.github.io/post/shi-yong-dai-li-jia-su-github/</id>
-        <link href="https://454394216.github.io/zhangyigridea.github.io/post/shi-yong-dai-li-jia-su-github/">
+        <id>https://zyrjm.xyz/post/shi-yong-dai-li-jia-su-github/</id>
+        <link href="https://zyrjm.xyz/post/shi-yong-dai-li-jia-su-github/">
         </link>
         <updated>2020-07-27T14:55:38.000Z</updated>
         <content type="html"><![CDATA[<p>因为git默认是不使用系统的代理服务器，即使我们开了梯子，git下载依然很慢，所以需要一些额外配置。这儿我们以windows下的lantern为例</p>
 <h2 id="查看代理服务器">查看代理服务器</h2>
 <ol>
 <li>打开lantern设置<br>
-<img src="https://454394216.github.io/zhangyigridea.github.io//post-images/1595861891781.png" alt="" loading="lazy"></li>
+<img src="https://zyrjm.xyz/post-images/1595861891781.png" alt="" loading="lazy"></li>
 <li>点击设置<br>
-<img src="https://454394216.github.io/zhangyigridea.github.io//post-images/1595861885372.png" alt="" loading="lazy"></li>
+<img src="https://zyrjm.xyz/post-images/1595861885372.png" alt="" loading="lazy"></li>
 <li>点击高级设置，查看代理服务器<br>
-<img src="https://454394216.github.io/zhangyigridea.github.io//post-images/1595861935756.png" alt="" loading="lazy"></li>
+<img src="https://zyrjm.xyz/post-images/1595861935756.png" alt="" loading="lazy"></li>
 </ol>
 <h2 id="git配置http代理">git配置http代理</h2>
 <p>用于加速https形式的clone</p>
@@ -32,17 +32,17 @@
 <li>
 <p>设置http代理 用于我们只有从github上clone时才会用到代理，从码云或者自己的git服务器时就不需要了，所以配置时加上域名</p>
 <p><strong>git config --global http.https://github.com.proxy http://127.0.0.1:51462</strong><br>
-<img src="https://454394216.github.io/zhangyigridea.github.io//post-images/1595862059482.png" alt="" loading="lazy"></p>
+<img src="https://zyrjm.xyz/post-images/1595862059482.png" alt="" loading="lazy"></p>
 </li>
 <li>
 <p>设置配置https代理</p>
 <p><strong>git config --global https.https://github.com.proxy http://127.0.0.1:51462</strong><br>
-<img src="https://454394216.github.io/zhangyigridea.github.io//post-images/1595862066655.png" alt="" loading="lazy"></p>
+<img src="https://zyrjm.xyz/post-images/1595862066655.png" alt="" loading="lazy"></p>
 </li>
 <li>
 <p>查看git 配置。 确认已生效</p>
 <p>**git config -l **<br>
-<img src="https://454394216.github.io/zhangyigridea.github.io//post-images/1595862097330.png" alt="" loading="lazy"></p>
+<img src="https://zyrjm.xyz/post-images/1595862097330.png" alt="" loading="lazy"></p>
 </li>
 <li>
 <p>取消配置。如果需要取消使用unset</p>
@@ -55,7 +55,7 @@
 <ol>
 <li>
 <p>编辑配置文件 vim ~/.ssh/config<br>
-<img src="https://454394216.github.io/zhangyigridea.github.io//post-images/1595862117309.png" alt="" loading="lazy"></p>
+<img src="https://zyrjm.xyz/post-images/1595862117309.png" alt="" loading="lazy"></p>
 </li>
 <li>
 <p>增加一个github的配置段，为连接github.com时配置lantern的sockets代理</p>
@@ -66,7 +66,7 @@
 </code></pre>
 </li>
 </ol>
-<figure data-type="image" tabindex="1"><img src="https://454394216.github.io/zhangyigridea.github.io//post-images/1595862125982.png" alt="" loading="lazy"></figure>
+<figure data-type="image" tabindex="1"><img src="https://zyrjm.xyz/post-images/1595862125982.png" alt="" loading="lazy"></figure>
 <h2 id="linux下的配置">linux下的配置</h2>
 <p>linux下配置整体和上面windows的相同，只是ssh代理里的<code>ProxyCommand connect -S 127.0.0.1:51463 %h %p</code>需要修改为<code>ProxyCommand nc -v -x 127.0.0.1:51463 %h %p</code></p>
 <h2 id="其他梯子">其他梯子</h2>
@@ -75,15 +75,15 @@
     </entry>
     <entry>
         <title type="html"><![CDATA[C语言结构体对齐]]></title>
-        <id>https://454394216.github.io/zhangyigridea.github.io/post/c-yu-yan-jie-gou-ti-dui-qi/</id>
-        <link href="https://454394216.github.io/zhangyigridea.github.io/post/c-yu-yan-jie-gou-ti-dui-qi/">
+        <id>https://zyrjm.xyz/post/c-yu-yan-jie-gou-ti-dui-qi/</id>
+        <link href="https://zyrjm.xyz/post/c-yu-yan-jie-gou-ti-dui-qi/">
         </link>
         <updated>2020-07-27T13:23:59.000Z</updated>
         <content type="html"><![CDATA[<h1 id="结构体内存对齐">结构体内存对齐</h1>
 <ol>
 <li>
 <p>结构体对齐是为了提高CPU读取内存效率，防止一个数据放在两个8自己内存块中。无论是否对齐，x86-64都能正确工作。对齐的基本原则是<strong>K字节类型对象的对象起始地址必须是K的倍数</strong>：<br>
-<img src="https://454394216.github.io/zhangyigridea.github.io//post-images/1595856553524.png" alt="" loading="lazy"></p>
+<img src="https://zyrjm.xyz/post-images/1595856553524.png" alt="" loading="lazy"></p>
 </li>
 <li>
 <p>编译器需要在结构体中插入一些空隙来保证对齐，考虑下面的结构体:</p>
@@ -155,16 +155,16 @@ struct sc ac[N];
 } s;
 </code></pre>
 <p>假设结构体<code>s</code>的其实地址为<span class="katex"><span class="katex-mathml"><math><semantics><mrow><msub><mi>X</mi><mi>S</mi></msub></mrow><annotation encoding="application/x-tex">X_S</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.83333em;vertical-align:-0.15em;"></span><span class="mord"><span class="mord mathdefault" style="margin-right:0.07847em;">X</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.32833099999999993em;"><span style="top:-2.5500000000000003em;margin-left:-0.07847em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mathdefault mtight" style="margin-right:0.05764em;">S</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span></span></span></span>如果让画出内存布局，我相信第一反应(包括很多网上的文章)都是像下面那样：</p>
-<figure data-type="image" tabindex="1"><img src="https://454394216.github.io/zhangyigridea.github.io//post-images/1595856599210.png" alt="" loading="lazy"></figure>
+<figure data-type="image" tabindex="1"><img src="https://zyrjm.xyz/post-images/1595856599210.png" alt="" loading="lazy"></figure>
 <p>但是上述布局都是默认内存的起始地址是0或者4的倍数。但是按照我们之前的推到，只是要求<span class="katex"><span class="katex-mathml"><math><semantics><mrow><msub><mi>X</mi><mi>S</mi></msub></mrow><annotation encoding="application/x-tex">X_S</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.83333em;vertical-align:-0.15em;"></span><span class="mord"><span class="mord mathdefault" style="margin-right:0.07847em;">X</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.32833099999999993em;"><span style="top:-2.5500000000000003em;margin-left:-0.07847em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mathdefault mtight" style="margin-right:0.05764em;">S</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span></span></span></span>是第一个成员<span class="katex"><span class="katex-mathml"><math><semantics><mrow><mi>K</mi></mrow><annotation encoding="application/x-tex">K</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.68333em;vertical-align:0em;"></span><span class="mord mathdefault" style="margin-right:0.07153em;">K</span></span></span></span>的整数倍（第一个元素位<code>char</code>，K值为1），或者<span class="katex"><span class="katex-mathml"><math><semantics><mrow><msub><mi>X</mi><mi>S</mi></msub><mo>+</mo><mi>N</mi></mrow><annotation encoding="application/x-tex">X_S+N</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.83333em;vertical-align:-0.15em;"></span><span class="mord"><span class="mord mathdefault" style="margin-right:0.07847em;">X</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.32833099999999993em;"><span style="top:-2.5500000000000003em;margin-left:-0.07847em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mathdefault mtight" style="margin-right:0.05764em;">S</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span><span class="mspace" style="margin-right:0.2222222222222222em;"></span><span class="mbin">+</span><span class="mspace" style="margin-right:0.2222222222222222em;"></span></span><span class="base"><span class="strut" style="height:0.68333em;vertical-align:0em;"></span><span class="mord mathdefault" style="margin-right:0.10903em;">N</span></span></span></span>是第n个成员<code>xn</code>的<span class="katex"><span class="katex-mathml"><math><semantics><mrow><msub><mi>K</mi><mi>n</mi></msub></mrow><annotation encoding="application/x-tex">K_n</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.83333em;vertical-align:-0.15em;"></span><span class="mord"><span class="mord mathdefault" style="margin-right:0.07153em;">K</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.151392em;"><span style="top:-2.5500000000000003em;margin-left:-0.07153em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mathdefault mtight">n</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span></span></span></span>的整数倍即可，没有要求<span class="katex"><span class="katex-mathml"><math><semantics><mrow><msub><mi>X</mi><mi>S</mi></msub></mrow><annotation encoding="application/x-tex">X_S</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.83333em;vertical-align:-0.15em;"></span><span class="mord"><span class="mord mathdefault" style="margin-right:0.07847em;">X</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.32833099999999993em;"><span style="top:-2.5500000000000003em;margin-left:-0.07847em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mathdefault mtight" style="margin-right:0.05764em;">S</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span></span></span></span>是<span class="katex"><span class="katex-mathml"><math><semantics><mrow><msub><mi>K</mi><mi>n</mi></msub></mrow><annotation encoding="application/x-tex">K_n</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.83333em;vertical-align:-0.15em;"></span><span class="mord"><span class="mord mathdefault" style="margin-right:0.07153em;">K</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.151392em;"><span style="top:-2.5500000000000003em;margin-left:-0.07153em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mathdefault mtight">n</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span></span></span></span>的整数倍，如果起始地址是3呢？那么内存布局是怎么样了，按照前面的规则，<code>&amp;s.b</code>的地址刚好是4，所以不用补齐，此时结构体的大小是5，但是还必须是成员的最大<span class="katex"><span class="katex-mathml"><math><semantics><mrow><mi>K</mi></mrow><annotation encoding="application/x-tex">K</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.68333em;vertical-align:0em;"></span><span class="mord mathdefault" style="margin-right:0.07153em;">K</span></span></span></span>值(对于struct St为4)的整数倍,所以结构体大小必须为8， 也就是需要早尾部填充3个字节，按照这个推出内存布局如下：</p>
 </li>
 </ol>
-<figure data-type="image" tabindex="2"><img src="https://454394216.github.io/zhangyigridea.github.io//post-images/1595856612682.png" alt="" loading="lazy"></figure>
+<figure data-type="image" tabindex="2"><img src="https://zyrjm.xyz/post-images/1595856612682.png" alt="" loading="lazy"></figure>
 <p>这种布局一样满足所有的规则。但是经过实际的测试发现<strong>编译器位结构体首地址分配的是结构体最大<span class="katex"><span class="katex-mathml"><math><semantics><mrow><mi>K</mi></mrow><annotation encoding="application/x-tex">K</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.68333em;vertical-align:0em;"></span><span class="mord mathdefault" style="margin-right:0.07153em;">K</span></span></span></span>值的整数倍</strong>（比结构体<code>struct St</code>的首地址就是4的倍数），也就是实际上确实第一种内存布局方式（但是暂时还不清楚原因是什么，也没有google到)。</p>
 <p>当起始地址为1的时候也是同理，就不推导了:</p>
-<figure data-type="image" tabindex="3"><img src="https://454394216.github.io/zhangyigridea.github.io//post-images/1595856625719.png" alt="" loading="lazy"></figure>
+<figure data-type="image" tabindex="3"><img src="https://zyrjm.xyz/post-images/1595856625719.png" alt="" loading="lazy"></figure>
 <p>当起始地址为2的时候：</p>
-<figure data-type="image" tabindex="4"><img src="https://454394216.github.io/zhangyigridea.github.io//post-images/1595856633050.png" alt="" loading="lazy"></figure>
+<figure data-type="image" tabindex="4"><img src="https://zyrjm.xyz/post-images/1595856633050.png" alt="" loading="lazy"></figure>
 <p>可以看到如果任由起始地址任意的话，可以看到有4种可能，如果把<span class="katex"><span class="katex-mathml"><math><semantics><mrow><mi>i</mi><mi>n</mi><mi>t</mi></mrow><annotation encoding="application/x-tex">int</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.65952em;vertical-align:0em;"></span><span class="mord mathdefault">i</span><span class="mord mathdefault">n</span><span class="mord mathdefault">t</span></span></span></span>替换成<span class="katex"><span class="katex-mathml"><math><semantics><mrow><mi>l</mi><mi>o</mi><mi>n</mi><mi>g</mi></mrow><annotation encoding="application/x-tex">long</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.8888799999999999em;vertical-align:-0.19444em;"></span><span class="mord mathdefault" style="margin-right:0.01968em;">l</span><span class="mord mathdefault">o</span><span class="mord mathdefault">n</span><span class="mord mathdefault" style="margin-right:0.03588em;">g</span></span></span></span>就会有8种情况，所以可能是为了统一，才规定首地址必须是最大成员<span class="katex"><span class="katex-mathml"><math><semantics><mrow><mi>K</mi></mrow><annotation encoding="application/x-tex">K</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.68333em;vertical-align:0em;"></span><span class="mord mathdefault" style="margin-right:0.07153em;">K</span></span></span></span>值的倍数把。</p>
 <ol>
 <li>
