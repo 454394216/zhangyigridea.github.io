@@ -11,7 +11,7 @@
     <link rel="stylesheet" href="https://zyrjm.xyz/media/css/live2d.css">
     <meta name="description" content="梦想存储罐" />
     <link rel="stylesheet" href="https://zyrjm.xyz/styles/main.css">
-    <title>Gridea</title>
+    <title>梦想存储罐</title>
 </head>
 
 <body>
@@ -27,6 +27,75 @@
 
 <body>
     
+    <div id=side>
+        <div class="avatar-border">
+            <img src="https://zyrjm.xyz/images/avatar.png?v=1596036286816" class="avatar">
+        </div>
+        <div class="sitename">梦想存储罐</div>
+        <span class="describtion" data-text='["梦想存储罐"]'>&nbsp;</span>
+        
+        <div class="search">
+            <!-- <input type="text" class="search-input" placeholder="标题搜索(●'◡'●)" /> -->
+            <input type="text" class="search-input" placeholder="标题搜索 ⚆_⚆ つ♡">
+            <div class="search-results"></div>
+        </div>
+        
+    <div class="share-button">
+        <span>社交按钮</span>
+        
+        
+        
+        
+        
+        
+    </div>
+    <div id="qq" style="display:none"></div>
+    
+    
+    <div class="mchocie describtion">
+        <a href="/" class="menubutton">
+            首页
+        </a>
+    </div>
+    
+    
+    
+    <div class="mchocie describtion">
+        <a href="/archives" class="menubutton">
+            归档
+        </a>
+    </div>
+    
+    
+    
+    <div class="mchocie describtion">
+        <a href="/tags" class="menubutton">
+            标签
+        </a>
+    </div>
+    
+    
+    
+    <div class="mchocie describtion">
+        <a href="/post/about" class="menubutton">
+            关于
+        </a>
+    </div>
+    
+    
+    
+    
+    <hr>
+    <div id="footinfo">Powered by <a href="https://github.com/getgridea/gridea" target="_blank">Gridea</a> | Theme: <a
+        href="https://github.com/850552586/gridea-theme-fog">Fog</a></div>
+    
+    
+    </div>
+
+
+<script src="https://zyrjm.xyz/media/js/wordshow.js"></script>
+    
+
 
 
 
@@ -179,7 +248,7 @@
           <span class="icon-bar"></span>
           <span class="icon-bar"></span>
         </button>
-        <a class="navbar-brand" href="https://zyrjm.xyz">Gridea&nbsp;&nbsp;|</a>
+        <a class="navbar-brand" href="https://zyrjm.xyz">梦想存储罐&nbsp;&nbsp;|</a>
       </div>
 
       <!-- Collect the nav links, forms, and other content for toggling -->
@@ -259,7 +328,7 @@
                     <div style="margin-top:60px"></div>
                 </div>
                 
-                <div id="main" class="col-xs-12 col-sm-7 top" style="z-index: 999;">
+                <div id="main" class="col-xs-12 col-sm-7" style="z-index: 999;">
                     <style>
     /* 触发弹窗图片的样式 */
     .talkimg {
@@ -384,7 +453,7 @@
     add();
 
     function get() {
-        var t = JSON.parse('');
+        var t = JSON.parse('[]');
         talkindex = t.length - 1;
         for (var i = t.length - 1; i >= 0; i--) {
             var d = {};
@@ -415,7 +484,7 @@
                 <img src="' + talks[i].img + '" class="talkimg"> \
                 <div class="ainfo">\
                     <div class="ainfo-intro">\
-                        <img class="intro1" src="https://zyrjm.xyz/images/avatar.png?v=1596034331685">\
+                        <img class="intro1" src="https://zyrjm.xyz/images/avatar.png?v=1596036286816">\
                         <div class="author">' + talks[i].author + '</div>·\
                         <div class="time">' + talks[i].time + '</div>\
                     </div>\
@@ -458,10 +527,10 @@
         </div>
         <div id="bg">
         </div>
-        <div id="bgchoice" style="display: none">
+        <div id="bgchoice" style="display: none">default
             </div>
             
-            <div id="bgurl" style="display:none"></div>
+            <div id="bgurl" style="display:none">\media\images\custom-bgimage.jpg</div>
                
     </div>
     <div id="landlord">
@@ -473,6 +542,16 @@
 
 </html>
         
+            <script type="text/javascript">
+                var message_Path = '/live2d/'
+                var home_Path = document.getElementById("domainname").innerHTML+"/"; //此处修改为你的域名，必须带斜杠
+            </script>
+            <script type="text/javascript" src="https://zyrjm.xyz/media/live2d/js/live2d.js"></script>
+            <script type="text/javascript" src="https://zyrjm.xyz/media/live2d/js/message.js"></script>
+            <script type="text/javascript">
+                loadlive2d("live2d", "https://zyrjm.xyz/media/live2d/assets/tororo.model.json");
+            </script>
+            
 
 <script>
         var bgchoice=$('#bgchoice').html();
@@ -483,3 +562,6 @@
                 bgurl = bgurl.replace("\\", "/");
         bg.css("background", "url('" + bgurl + "')");
 </script>
+
+            <script src="https://zyrjm.xyz/media/js/index.js"></script>
+            
