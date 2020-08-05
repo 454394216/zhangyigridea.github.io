@@ -2,7 +2,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://zyrjm.xyz</id>
     <title>梦想存储罐</title>
-    <updated>2020-08-01T05:04:22.151Z</updated>
+    <updated>2020-08-05T06:55:32.050Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
     <link rel="alternate" href="https://zyrjm.xyz"/>
     <link rel="self" href="https://zyrjm.xyz/atom.xml"/>
@@ -168,7 +168,7 @@ sudo kubeadm init --apiserver-advertise-address=192.168.1.6 --image-repository r
 <li>
 <p>执行下面的命令</p>
 <pre><code>mkdir -p ~/.kube
-sudo cp /etc/kubernetes/admin.conf /root/.kube/config
+sudo cp /etc/kubernetes/admin.conf ~/.kube/config
 sudo chown -R `whoami`:`whoami` ~/.kube 
 </code></pre>
 </li>

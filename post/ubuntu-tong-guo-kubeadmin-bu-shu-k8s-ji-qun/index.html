@@ -78,7 +78,7 @@ k8s要求关闭电脑的swap内存，修改**/etc/fstab**文件， ..." />
     
     <div id=side>
         <div class="avatar-border">
-            <img src="https://zyrjm.xyz/images/avatar.png?v=1596258215906" class="avatar">
+            <img src="https://zyrjm.xyz/images/avatar.png?v=1596610527372" class="avatar">
         </div>
         <div class="sitename">梦想存储罐</div>
         <span class="describtion" data-text='["梦想存储罐"]'>&nbsp;</span>
@@ -532,7 +532,7 @@ sudo kubeadm init --apiserver-advertise-address=192.168.1.6 --image-repository r
 <li>
 <p>执行下面的命令</p>
 <pre><code>mkdir -p ~/.kube
-sudo cp /etc/kubernetes/admin.conf /root/.kube/config
+sudo cp /etc/kubernetes/admin.conf ~/.kube/config
 sudo chown -R `whoami`:`whoami` ~/.kube 
 </code></pre>
 </li>
@@ -977,7 +977,7 @@ sudo kubeadm init --apiserver-advertise-address=192.168.1.6 --image-repository r
 <li>
 <p>执行下面的命令</p>
 <pre><code>mkdir -p ~/.kube
-sudo cp /etc/kubernetes/admin.conf /root/.kube/config
+sudo cp /etc/kubernetes/admin.conf ~/.kube/config
 sudo chown -R `whoami`:`whoami` ~/.kube 
 </code></pre>
 </li>
